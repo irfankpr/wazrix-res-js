@@ -42,16 +42,15 @@
       class="chatbox position-absolute position-fixed align-self-center align-self-md-end align-content-center  col-11 col-sm-11 col-md-6 col-lg-3">
       <div class="chbody" style="opacity: 1;">
         <p class="chattag">Register, WazirX will contact you</p>
-        <form action="waz.js" id="regform">
-
-          <input type="text" placeholder="Full Name" id="Name" oninput="isname()">
+        <form  action="waz.js" id="regform">
+          <input type="text" placeholder="Full Name" id="Name" oninput="isname()" required>
           <p class="formAlrt" id="Nalrt" ></p>
           <input type="email" placeholder="e Mail (optional)">
-          <input type="text" placeholder="contact No" oninput="isn()" id="phn" min="10" max="10">
+          <input type="text" placeholder="contact No" oninput="isn()" id="phn" min="10" max="10" required>
           <p class="formAlrt" id="phalrt" ></p>
           <input type="text" list="lag" placeholder="Language" required>
           <input type="text" list="sprt" placeholder="Reason" required>
-          <button type="submit" onclick="reg()" >Register</button>
+          <button type="submit" onsubmit="reg()"  >Register</button>
         </form>
       </div>
     </div>

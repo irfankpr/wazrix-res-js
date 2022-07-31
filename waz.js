@@ -40,15 +40,13 @@ function isname() {
 }
 
 function reg() {
-
-
     document.getElementById("cct").style.backgroundColor = "#f9de38";
     document.getElementById("cct").innerText = "CONTACT US";
     document.getElementById("cct").style.color = "#8a7d2c";
     document.getElementById("chtbx").style.display = "none";
     document.getElementById("cct").value = "OFF";
     document.write("<h1>Thank you, We will contact you soon.</h1>");
-    alert("We will connect you soon.")
-    window.location.reload("index.html");
+    alert("We will connect you soon.");
+    window.location.reload("if.html");
     
 }
