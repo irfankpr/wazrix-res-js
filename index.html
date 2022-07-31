@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="wazres.css" />
+  <link rel="icon" type="assets/wazico.png" href="assets/wazico.png" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="root">
+    <!-- header starts -->
+    <header class="container-fluid bg-white sticky-top">
+      <div class="row">
+        <div class="col-7 pl-lg-5 pl-sm-0 pl-0">
+          <!--  -->
+          <div class="col-lg-4 col-sm-5 col-lg-4">
+            <img class="toplogo m-md-2 ml-0 mt-2 mb-2" src="assets/9dbed47f8b52d4eea32ab02c078595a56c4573ad.png"
+              alt="" />
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 pr-0">
+          <button class="col-xl-3 col-lg-4 col-md-6 col-12 h100 text-center float-right cct" id="cct" value="OFF"
+            onclick="chaton()">
+            CONTACT US
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- header ends -->
+    <!--  chat boax -->
+    <div id="chtbx"
+      class="chatbox position-absolute position-fixed align-self-center align-self-md-end align-content-center  col-11 col-sm-11 col-md-6 col-lg-3">
+      <div class="chbody" style="opacity: 1;">
+        <p class="chattag">Register, WazirX will contact you</p>
+        <form action="waz.js" id="regform">
+
+          <input type="text" placeholder="Full Name" id="Name" oninput="isname()">
+          <p class="formAlrt" id="Nalrt" ></p>
+          <input type="email" placeholder="e Mail (optional)">
+          <input type="text" placeholder="contact No" oninput="isn()" id="phn">
+          <p class="formAlrt" id="phalrt" ></p>
+          <input type="text" list="lag" placeholder="Language" required>
+          <input type="text" list="sprt" placeholder="Reason" required>
+          <button type="submit" onclick="reg()" >Register</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- banner starts -->
+    <div class="container-fluid m-0 m-sm-0 m-lg-0 d-flex justify-content-center bg-image">
+      <div class="mt-5 col-12 col-sm-6 col-md-7 col-lg-6">
+        <h1 class="hlp text-center">Hi! How can we help?</h1>
+        <div class="srch justify-content-center mt-3">
+          <span class="material-symbols-outlined"> search </span>
+          <input type="search" class="srchbar" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+    <!-- banner ends -->
+
+    <!-- ...........  catogory body starts -->
+
+    <section class="container catagory row m-auto">
+      <h5 class="row m-3 col-12">Catagory</h5>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/rs.svg" alt="">
+          <h6>INR Deposit & withdrawal</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/kyc.svg" alt="">
+          <h6>Signing Up & KYC</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/b.svg" alt="">
+          <h6>Cryptocurrency Deposit & withdrawal</h6>
+        </div>
+      </div>
+
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/t and fe.svg" alt="">
+          <h6>Trading & Fees</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/rs.svg" alt="">
+          <h6>P2P</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/wazcoin.svg" alt="">
+          <h6>WRZ Coin</h6>
+        </div>
+      </div>
+
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/sec.svg" alt="">
+          <h6>Security</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/general.svg" alt="">
+          <h6>General</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/anounce.svg" alt="">
+          <h6>Announcements</h6>
+        </div>
+      </div>
+
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/percent.svg" alt="">
+          <h6>Coupons</h6>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-12 col-1 p-1">
+        <div class="catitem  m-3 shadow-sm p-3 bg-white rounded">
+          <img src="assets/acmanag.svg" alt="">
+          <h6>Account Management</h6>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ...........  catogory body ends -->
+    <!-- ............. popular articles starts.............. -->
+
+    <section class="articles container">
+      <ul class="col-12 artList">
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360001690794-Withdraw-INR-from-your-WazirX-account-Process-Time-taken">
+              Withdraw INR from your WazirX account - Process &amp; Time taken
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360000504293-Guide-to-Signing-Up-KYC-Verification">
+              Guide to Signing Up &amp; KYC Verification
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360000654353-Can-foreign-nationals-create-an-account-on-WazirX-">
+              Can foreign nationals create an account on WazirX?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/900000202006-Transfer-funds-between-WazirX-and-Binance-account">
+              Transfer funds between WazirX and Binance account
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360001653334-Deposit-Receive-Cryptocurrency-to-your-WazirX-account-Process-Time-Taken">
+              Deposit/Receive Cryptocurrency to your WazirX account - Process &amp; Time Taken
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360001642413-Withdraw-Send-Cryptocurrency-from-your-WazirX-account-Process-Time-Taken">
+              Withdraw/Send Cryptocurrency from your WazirX account - Process &amp; Time Taken
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900005069923-How-to-buy-USDT-from-INR-balance-">
+              How to buy USDT from INR balance?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900004114586-How-to-sell-Bitcoin-BTC-or-other-cryptos-">
+              How to sell Bitcoin (BTC) or other cryptos?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900004114466-How-to-buy-Bitcoin-BTC-or-other-cryptos-">
+              How to buy Bitcoin (BTC) or other cryptos?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360001291234-Trading-Deposit-Withdrawal-Fees">
+              Trading, Deposit &amp; Withdrawal Fees
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360007205514-WazirX-P2P-How-it-Works-">
+              WazirX P2P - How it Works?
+            </a>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360007212654-How-to-Buy-USDT-on-WazirX-P2P-">
+              How to Buy USDT on WazirX P2P?
+            </a></div>
+        </li>
+
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360034453494-How-to-Sell-USDT-on-WazirX-P2P-">
+              How to Sell USDT on WazirX P2P?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900003464906-How-to-convert-Crypto-Dust-to-WRX-Coin-">
+              How to convert Crypto Dust to WRX Coin?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900000275703-Using-WRX-to-Pay-Trading-Fees">
+              Using WRX to Pay Trading Fees
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900000184066-WRX-Release-Schedule-Sign-Up-Bonus-Update">
+              WRX Release Schedule + Sign Up Bonus Update
+            </a>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360005940494-WRX-Mining-Unlock-Earn-upto-10-000-WRX-Coins-Daily-">
+              WRX Mining - Unlock &amp; Earn upto 10,000 WRX Coins Daily!
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/360000497354-WRX-Coin-Details-How-to-earn">
+              WRX - Coin Details &amp; How to elistItem . BTY, Tether, USDT ...
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360005940494-WRX-Mining-Unlock-Earn-upto-10-000-WRX-Coins-Daily-">
+              What is my WRX balance?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360014633494-Two-Factor-Authentication-2FA-Setup-Change-Recovery">
+              Two-Factor Authentication (2FA) - Setup, Change &amp; Recovery
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360001621054-Securing-your-WazirX-account-Tips-Best-Practices">
+              Securing your WazirX account - Tips &amp; Best Practices
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a href="/hc/en-us/articles/900002614863-How-do-coupons-work-on-WazirX-">
+              How do coupons work on WazirX?
+            </a></div>
+        </li>
+        <li class=" col-xl-4 col-lg-4 col-md-12 col-12 float-left p-0 mt-lg-4 mt-1 float-left p-2 p-1">
+          <div class="listItem"><a
+              href="/hc/en-us/articles/360000766554-WazirX-Referral-Program-Participation-Tracking-Rules">
+              WazirX Referral Program - Participation, Tracking &amp; Rules
+            </a></div>
+        </li>
+      </ul>
+
+    </section>
+    <!-- ............. popular articles starts.............. -->
+    <!-- .........  footer starts...................... -->
+    <footer class="container-fluid footer col-12 float-left pt-5 ">
+      <div class="row justify-content-center">
+        <div class="row col-12 col-md-12 col-lg-4 justify-content-lg-start justify-content-center float-left pl-lg-5">
+          <img class=" toplogo" src="assets/9dbed47f8b52d4eea32ab02c078595a56c4573ad.png" alt="" srcset="">
+        </div>
+
+        <div class=" row  col-12 col-md-12 col-lg-8 col-md-8 justify-content-center justify-content-lg-end ">
+
+          <div class=" col-12 col-sm-6 col-md-3 row justify-content-center justify-content-md-end mt-3 mt-lg-0">
+            <div class="strs"><img class="img-fluid row" src="assets/gplay.svg" alt=""></div>
+          </div>
+          <div class=" col-12 col-sm-6 col-md-3 row justify-content-center justify-content-md-end mt-3 mt-lg-0">
+            <div class="strs"><img class="img-fluid row" src="assets/appstr.svg" alt=""></div>
+          </div>
+          <div class=" col-12 col-sm-6 col-md-3 row justify-content-center justify-content-md-end mt-3 mt-lg-0">
+            <div class="strs"><img class="img-fluid row" src="assets/wind.svg" alt=""></div>
+          </div>
+          <div class=" col-12 col-sm-6 col-md-3 row justify-content-center justify-content-md-end mt-3 mt-lg-0">
+            <div class="strs"><img class="img-fluid row" src="assets/ma.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ender container-fluid row mt-5 justify-content-center pt-3 ">
+        <div class="about col-lg-2 col-md-4 col-sm-6 col-6 ">
+          <ul>
+            <li>
+              <h6>About</h6>
+            </li>
+            <li>WRX coin</li>
+            <li>Blog</li>
+            <li>Career</li>
+            <li>WazirX Warriors</li>
+            <li>Annoucements</li>
+            <li>Media Assets</li>
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="service col-lg-2 col-md-4 col-sm-6 col-6 ">
+          <ul>
+            <li>
+              <h6>Services</h6>
+            </li>
+            <li>Download</li>
+            <li>Corporate Account</li>
+            <li>Referral Program</li>
+            <li>Market Maker Program</li>
+            <li>WazirX API</li>
+            <li>WazirX API</li>
+            <li>Partnerships & Enquiries</li>
+          </ul>
+        </div>
+        <div class="support col-lg-2 col-md-4 col-sm-6 col-6 ">
+          <ul>
+            <li>
+              <h6>Support</h6>
+            </li>
+            <li>Help Center</li>
+            <li>Fees</li>
+            <li>Security</li>
+            <li>Law Enforcement Request</li>
+            <li>What is Bit coin</li>
+          </ul>
+        </div>
+        <div class="social col-lg-2 col-md-4 col-sm-6 col-6 ">
+          <ul>
+            <li>
+              <h6>Socials</h6>
+            </li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>LinkedIn</li>
+            <li>Telegram</li>
+            <li>YouTube</li>
+            <li>Reddit</li>
+            <li>CoinMarketCap</li>
+          </ul>
+        </div>
+        <div class="cerpto col-lg-2 col-md-4 col-sm-6 col-6 ">
+          <ul>
+            <li>
+              <h6>Buy Crypto</h6>
+            </li>
+            <li>Buy Bitcoin</li>
+            <li>Buy Ethereum</li>
+            <li>Buy USDT</li>
+            <li>Buy WRX Coin</li>
+            <li>Buy Tron</li>
+            <li>Buy Matic</li>
+            <li>Buy Dogecoin</li>
+            <li>Buy SHIB</li>
+            <li>Buy Solana</li>
+            <li>Buy Cardano</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- .........  footer ends...................... -->
+
+    <!-- data list -->
+    <datalist id="sprt" class="dist">
+      <option>Technical</option>
+      <option>Refund</option>
+      <option>About Us</option>
+      <option>Malfunction</option>
+      <option>Report fraud</option>
+  </datalist>
+  <datalist id="lag" class="dist">
+    <option>Malayalam</option>
+    <option>Tamil</option>
+    <option>English</option>
+    <option>Hindi</option>
+    <option>Arabic</option>
+</datalist>
+
+    <!-- ........................  script   links .................................... -->
+    <script src="waz.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>
