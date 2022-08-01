@@ -43,13 +43,16 @@
       <div class="chbody" style="opacity: 1;">
         <p class="chattag">Register, WazirX will contact you</p>
         <form  id="regform">
-          <input type="text" placeholder="Full Name" id="Name" oninput="isname()" required>
+          <input type="text" placeholder="Full Name" id="Name" oninput="isname()" onblur="isInput()" required>
           <p class="formAlrt" id="Nalrt" ></p>
-          <input type="email" placeholder="e Mail (optional)">
-          <input type="text" placeholder="contact No" oninput="isn()" id="phn" min="10" max="10" required>
+          <input type="text" placeholder="e Mail (optional)" id="mail" onblur="isMail()">
+          <p class="formAlrt" id="Malrt" ></p>
+          <input type="text" placeholder="contact No" oninput="isn()" id="phn" onblur="isTen()" required>
           <p class="formAlrt" id="phalrt" ></p>
-          <input type="text" list="lag" placeholder="Language" required>
-          <input type="text" list="sprt" placeholder="Reason" required>
+          <input type="text" list="lag" placeholder="Language" onblur="Sopt1()" id="opt1" oninput="isInput()" required>
+          <p class="formAlrt" id="Aopt1" ></p>
+          <input type="text" list="sprt" placeholder="Reason" onblur="Sopt2()" id="opt2" oninput="isInput()" required>
+          <p class="formAlrt" id="Aopt2" ></p>
           <button type="submit" onsubmit="reg()"  >Register</button>
         </form>
       </div>
